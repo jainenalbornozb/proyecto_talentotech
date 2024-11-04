@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Páramo Sombrío Web</title>
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Iconos -->
+    <script
+      src="https://kit.fontawesome.com/4d235eb227.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- Cabecera -->
+    <header>
+      <div class="header-banner">
+      <p class="header-banner-txt">19% OFF en originales Páramo Sombrío</p>
+    </div>
+    <!-- Logo -->
+      <a href="index.html">
+        <img
+          src="./assets/img/logo-sin-fondo.png"
+          class="logo"
+          alt="logo con iniciales de Páramo Sombrío en un fondo oscuro, iniciales de colores verdes"
+        />
+      </a>
+
+      <!-- Menú hamburguesa -->
+      <input type="checkbox" name="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon-action"
+        ><div class="fa-solid fa-bars" id="menu-icon"></div>
+      </label>
+
+      <!-- Menú de navegación -->
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#hero">Sobre nosotros</a></li>
+          <li><a href="#productos-container">Productos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="">Opiniones</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Cuerpo de la página -->
+    <main>
+      <!-- Carousel con imágenes -->
+      <div class="carousel-wrapper">
+        <div class="carousel-container">
+          <div class="carousel">
+            <div class="image-one"> <img src="./assets/img/banner-web.jpg" alt="banner-con-iniciales"></div>
+            <div class="image-two"><img src="./assets/img/banner-desfile nocturno.jpg" alt="banner-desfile-nocturno"></div>
+            <div class="image-three"> <img src="./assets/img/banner-historias ocultas.jpg" alt="banner-historias-ocultas"></div>
+            <div class="image-four"> <img src="./assets/img/tormenta-texto.jpg" alt="tormenta-texto-promocional"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <section id="hero">
+        <div class="hero-text">
+          <h1>Bienvenidos al Universo Páramo Sombrío</h1>
+          <p>
+            Con poco más de un año de funcionamiento, estamos desarrollando la marca y expandiendo el lore con contenido web y preparando muchos proyectos que se van a ir presentando a su tiempo, como el lanzamiento de nuestro segundo libro; Historias Ocultas Vol. 02: Leyendas urbanas, estará disponible a la venta en breve.
+          </p>
+           </div>
+      </section>
+
+<!-- Sección con productos -->
+ <section id="productos-container">
+  
+  <div class="productos">
+    <article class="producto">
+      <img src="./assets/img/portadadesfile.jpg" alt="portada-libro-desfile-nocturno">
+      <div  class="detalles-articulo">
+        <p class="precio">$11.000</p>
+        <p class="descuento">19% OFF</p>
+        <h4>Desfile Nocturno: la noche de los demonios</h4>
+      </div>
+    </article>
+  </div>
+
+<div class="productos">  
+  <article class="producto">
+    <img src="./assets/img/portadahistorias1.jpg" alt="portada-libro-historias-ocultas-vol-01">
+  <div class="detalles-articulo">
+    <p class="precio">$11.000</p>
+    <p class="descuento">19% OFF</p>
+    <h4>Historias Ocultas Volumen 1: Cuatro caminos, cuatro cadenas</h4>
+  </div>
+  </article>
+</div>
+
+<div class="productos">
+  <article class="producto">
+    <img src="./assets/img/portadahistorias2.jpg" alt="portada-libro-historias-ocultas-vol-02">
+    <div class="detalles-articulo>
+      <p class="precio">Próximamente disponible</p>
+      <h4>Historias Ocultas Volumen 2: Leyendas urbanas</h4>
+    </div>
+  </article>
+</div>
+ </section>
+
+      <!-- Sección formulario de contacto -->
+       <section id="contacto">
+      <form action="https://formspree.io/f/xwpedzyg" method="POST">
+        <label for="nombre">
+          Nombre
+          <input
+            type="text"
+            name="nombre"
+            placeholder="Ingresa tu nombre"
+            id="nombre"
+            required
+          />
+        </label>
+        <label for="mail">Mail</label>
+        <input
+          type="email"
+          name="mail"
+          placeholder="Ingresa tu mail"
+          id="mail"
+          required
+        />
+      </label>
+      <label for="telefono">
+        Teléfono
+        <input
+          type="number"
+          name="telefono"
+          placeholder="Ingresa tu teléfono"
+          id="telefono"
+          required
+        />
+      </label>
+      <label for="asunto">
+        Asunto
+        <input
+          type="text"
+          name="asunto"
+          placeholder="Motivo de contacto"
+          id="asunto"
+          required
+        />
+      </label>
+      <label for="mensaje">Tu mensaje</label>
+      <textarea
+        name="mensaje"
+        id="mensaje"
+        placeholder="Deja tu mensaje, duda o consulta"
+        required
+      ></textarea>
+    </label>
+    <button type="submit" class="btn-submit">Enviar</button>
+    <button type="reset" class="btn-reset">Borrar</button>
+      </form>
+    </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+      <div class="redes-sociales">
+        <p>Nuestras redes sociales</p>
+        <a
+          href="https://www.instagram.com/universo_paramo_sombrio/"
+          target="_blank"
+          aria-label="Instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.facebook.com/universo.ficcional.cd/"
+          target="_blank"
+          aria-label="Facebook"
+        >
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="mailto:cdpmsroisel@gmail.com" aria-label="Correo electrónico">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+      <small class="copyright">© Todos los derechos reservados.</small>
+    </footer>
+  </body>
+</html>
