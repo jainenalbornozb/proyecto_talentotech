@@ -11,6 +11,9 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap"
       rel="stylesheet"
     />
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
     <!-- Iconos -->
     <script
@@ -25,31 +28,36 @@
       <div class="header-banner">
       <p class="header-banner-txt">19% OFF en originales Páramo Sombrío</p>
     </div>
-    <!-- Logo -->
-      <a href="index.html">
-        <img
-          src="./assets/img/logo-sin-fondo.png"
-          class="logo"
-          alt="logo con iniciales de Páramo Sombrío en un fondo oscuro, iniciales de colores verdes"
-        />
-      </a>
-
-      <!-- Menú hamburguesa -->
-      <input type="checkbox" name="checkbox" id="menu-toggle" />
-      <label for="menu-toggle" class="menu-icon-action"
-        ><div class="fa-solid fa-bars" id="menu-icon"></div>
-      </label>
-
       <!-- Menú de navegación -->
-      <nav class="navbar">
-        <ul class="navbar-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#hero">Sobre nosotros</a></li>
-          <li><a href="#productos-container">Productos</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-          <li><a href="">Opiniones</a></li>
-        </ul>
+      <nav class="navbar navbar-expand-lg navbar-dark" id="navbar-container">
+        <a class="navbar-brand" href="index.html">
+          <img src="./assets/img/logo-sin-fondo.png" class="logo" alt="logo con iniciales de Páramo Sombrío en un fondo oscuro, iniciales de colores verdes">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#hero">Sobre nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#productos-container">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#opiniones">Opiniones</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar producto" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
       </nav>
+      
     </header>
 
     <!-- Cuerpo de la página -->
@@ -57,32 +65,35 @@
       <!-- Carousel con imágenes -->
       <div class="carousel-wrapper">
         <div class="carousel-container">
-          <div class="carousel">
+      </div>    <div class="carousel">
             <div class="image-one"> <img src="./assets/img/banner-web.jpg" alt="banner-con-iniciales"></div>
             <div class="image-two"><img src="./assets/img/banner-desfile nocturno.jpg" alt="banner-desfile-nocturno"></div>
             <div class="image-three"> <img src="./assets/img/banner-historias ocultas.jpg" alt="banner-historias-ocultas"></div>
-            <div class="image-four"> <img src="./assets/img/tormenta-texto.jpg" alt="tormenta-texto-promocional"></div>
+            <div class="image-four"> </div><img src="./assets/img/banner-merchandising.jpg" alt="banner-merchandising"</div>
           </div>
         </div>
       </div>
 
       <!-- Hero -->
       <section id="hero">
-        <div class="hero-text">
+        <div class="</div>hero-text">
           <h1>Bienvenidos al Universo Páramo Sombrío</h1>
           <p>
-            Con poco más de un año de funcionamiento, estamos desarrollando la marca y expandiendo el lore con contenido web y preparando muchos proyectos que se van a ir presentando a su tiempo, como el lanzamiento de nuestro segundo libro; Historias Ocultas Vol. 02: Leyendas urbanas, estará disponible a la venta en breve.
+            A poco más de un año desde su creación, <span class="bold">Páramo Sombrío</span> se ha consolidado como una marca en constante crecimiento, con un universo narrativo que sigue expandiéndose y sorprendiendo. Bajo la visión de su fundador, <span class="bold">Alejandro Maldonado</span>, conocido como <span class="bold">CD</span>, autor de <span class="bold">Desfile Nocturno: la noche de los demonios</span> e <span class="bold">Historias Ocultas Vol I: cuatro caminos cuatro cadenas</span>, hemos construido una comunidad apasionada por el misterio y lo sobrenatural.
+          </p>
+          <p>
+            Con un equipo talentoso que incluye ilustradores, una Community Manager y una Correctora de Estilo, no sólo creamos libros y productos de calidad, sino también experiencias que trascienden lo común. Estamos emocionados por el inminente lanzamiento de nuestro segundo libro, <span class="bold">Historias Ocultas Vol II: Leyendas Urbanas</span>, un nuevo capítulo en este viaje lleno de intriga y relatos que te dejarán sin aliento. ¡Pronto estará disponible para que lo hagas parte de tu colección!
           </p>
            </div>
       </section>
 
 <!-- Sección con productos -->
- <section id="productos-container">
-  
+
+<section id="productos-container">
   <div class="productos">
-    <article class="producto">
-      <img src="./assets/img/portadadesfile.jpg" alt="portada-libro-desfile-nocturno">
-      <div  class="detalles-articulo">
+    <article class="producto" data-index="0">
+      <img src="./assets/img/portada-desfile-nocturno.jpg" alt="portada-libro-desfile-nocturno">
+      <div class="detalles-articulo">
         <p class="precio">$11.000</p>
         <p class="descuento">19% OFF</p>
         <h4>Desfile Nocturno: la noche de los demonios</h4>
@@ -90,27 +101,58 @@
     </article>
   </div>
 
-<div class="productos">  
-  <article class="producto">
-    <img src="./assets/img/portadahistorias1.jpg" alt="portada-libro-historias-ocultas-vol-01">
-  <div class="detalles-articulo">
-    <p class="precio">$11.000</p>
-    <p class="descuento">19% OFF</p>
-    <h4>Historias Ocultas Volumen 1: Cuatro caminos, cuatro cadenas</h4>
+  <div class="productos">
+    <article class="producto" data-index="1">
+      <img src="./assets/img/portada-historias-ocultas-vol-1.jpg" alt="portada-libro-historias-ocultas-vol-01">
+      <div class="detalles-articulo">
+        <p class="precio">$11.000</p>
+        <p class="descuento">19% OFF</p>
+        <h4>Historias Ocultas Volumen 1: Cuatro caminos, cuatro cadenas</h4>
+      </div>
+    </article>
   </div>
-  </article>
-</div>
 
-<div class="productos">
-  <article class="producto">
-    <img src="./assets/img/portadahistorias2.jpg" alt="portada-libro-historias-ocultas-vol-02">
-    <div class="detalles-articulo>
-      <p class="precio">Próximamente disponible</p>
-      <h4>Historias Ocultas Volumen 2: Leyendas urbanas</h4>
-    </div>
-  </article>
-</div>
- </section>
+  <div class="productos">
+    <article class="producto" data-index="2">
+      <img src="./assets/img/portada-historias-ocultas-vol-2.jpg" alt="portada-libro-historias-ocultas-vol-02">
+      <div class="detalles-articulo">
+        <p class="precio">Próximamente disponible</p>
+        <h4>Historias Ocultas Volumen 2: Leyendas urbanas</h4>
+      </div>
+    </article>
+  </div>
+
+  <div class="productos">
+    <article class="producto" data-index="3">
+      <img src="./assets/img/remera-sello-pheberiel.jpg" alt="remera-negra-sello-pheberiel">
+      <div class="detalles-articulo">
+        <p class="precio">$18.000</p>
+        <h4>Remera Sello de Pheberiel</h4>
+      </div>
+    </article>
+  </div>
+
+  <div class="productos">
+    <article class="producto" data-index="4">
+      <img src="./assets/img/funkopop-parabi-tomoe.jpg" alt="parabi-tomoe-yamato-simil-funkopop">
+      <div class="detalles-articulo">
+        <p class="precio">$18.000</p>
+        <h4>Muñeco Coleccionable "Parabi" #1 - Tomoe Yamato</h4>
+      </div>
+    </article>
+  </div>
+
+  <div class="productos">
+    <article class="producto" data-index="5">
+      <img src="./assets/img/llaveros-paramo-sombrio.jpg" alt="ejemplo-llaveros-paramo-sombrio">
+      <div class="detalles-articulo">
+        <p class="precio">$1.500</p>
+        <h4>Llaveros de personaje a elección</h4>
+      </div>
+    </article>
+  </div>
+</section>
+
 
       <!-- Sección formulario de contacto -->
        <section id="contacto">
@@ -125,15 +167,16 @@
             required
           />
         </label>
-        <label for="mail">Mail</label>
-        <input
-          type="email"
-          name="mail"
-          placeholder="Ingresa tu mail"
-          id="mail"
-          required
-        />
-      </label>
+        <label for="mail">
+          <span>Mail</span>
+          <input
+            type="email"
+            name="mail"
+            placeholder="Ingresa tu mail"
+            id="mail"
+            required
+          />
+        </label>
       <label for="telefono">
         Teléfono
         <input
@@ -168,30 +211,74 @@
     </section>
     </main>
 
+    <section id="opiniones">
+      <h2>Reseñas</h2>
+      <div class="opinion">
+        <p>
+          "Me encantó Desfile Nocturno, la historia es muy original y me mantuvo enganchada desde el principio hasta el final. ¡Espero con ansias el volumen 2!"
+        </p>
+        <p>- Gabriela Gómez </p>
+      </div>
+      <div class="opinion">
+        "Desfile Nocturno me ha permitido tener otra opinión respecto a la literatura de terror. Puede ser atrapante y emocionante a la vez. ¡Muy recomendado!"
+        </p>
+        <p>- Victor Velázquez</p>
+      </div>
+      <div class="opinion">
+        <p>
+          "Historias Ocultas es un libro que me ha sorprendido gratamente. La narrativa es muy buena y los personajes son por demás interesantes. ¡No puedo creer que el volumen 2 esté por salir!"
+        </p>
+        <p>- Tu fiel amigo, SgC</p>
+      </div>
+      <div class="opinion">
+        "Historias Ocultas me ha inspirado a leer otros libros de terror. La historia es muy interesante y los personajes son variados e impredecibles. Cada historia me dejó con ganas de más. Seguro lo releeré pronto!"
+        </p>
+        <p>- Soledad Sánchez</p>
+      </div>
+    </section>
     <!-- Pie de página -->
     <footer>
-      <div class="redes-sociales">
-        <p>Nuestras redes sociales</p>
-        <a
-          href="https://www.instagram.com/universo_paramo_sombrio/"
-          target="_blank"
-          aria-label="Instagram"
-        >
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-
-        <a
-          href="https://www.facebook.com/universo.ficcional.cd/"
-          target="_blank"
-          aria-label="Facebook"
-        >
-          <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a href="mailto:cdpmsroisel@gmail.com" aria-label="Correo electrónico">
-          <i class="fa-solid fa-envelope"></i>
-        </a>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h4>Menú</h4>
+            <ul>
+              <li><a href="#hero">Sobre nosotros</a></li>
+              <li><a href="#productos-container">Productos</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+              <li><a href="#opiniones">Opiniones</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4>Redes Sociales</h4>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/universo_paramo_sombrio/" target="_blank" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://www.facebook.com/universo.ficcional.cd/" target="_blank" aria-label="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a href="mailto:cdpmsroisel@gmail.com" aria-label="Correo electrónico">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h4>Suscríbete a nuestro Newsletter</h4>
+            <form action="https://your-mailchimp-form-action" method="post">
+              <div class="form-group">
+                <input type="email" name="EMAIL" placeholder="Tu correo electrónico" required>
+                <button type="submit" class="btn btn-primary">Suscríbete</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
       <small class="copyright">© Todos los derechos reservados.</small>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
