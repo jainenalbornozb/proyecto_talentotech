@@ -165,7 +165,6 @@ productos.forEach((producto, index) => {
   productoDiv.appendChild(botonAgregar);
 });
 
-
 // Array para almacenar los productos en el carrito
 let carrito = [];
 
@@ -173,7 +172,12 @@ let carrito = [];
 function agregarAlCarrito(productoId) {
   const producto = productos.find(p => p.id === productoId);
   if (producto) {
-    carrito.push(producto);
+    const productoEnCarrito = carrito.find(p => p.id === productoId);
+    if (productoEnCarrito) {
+      productoEnCarrito.cantidad += 1;
+    } else {
+      carrito.push({ ...producto, cantidad: 1 });
+    }
     console.log('Producto agregado al carrito:', producto);
     actualizarCarrito();
   } else {
@@ -190,7 +194,7 @@ function actualizarCarrito() {
     const productoDiv = document.createElement('div');
     productoDiv.className = 'producto-carrito';
     productoDiv.innerHTML = `
-      <p>${producto.nombre} - Precio: ${producto.precio}</p>
+      <p>${producto.nombre} - Precio: ${producto.precio} - Cantidad: ${producto.cantidad}</p>
       <input type="number" min="1" value="${producto.cantidad}" class="cantidad-producto" data-index="${index}">
       <button class="btn-eliminar" data-index="${index}">Eliminar</button>
     `;
@@ -228,26 +232,6 @@ function cargarCarrito() {
     carrito = JSON.parse(carritoGuardado);
     actualizarCarrito();
   }
-}
-
-// Función para actualizar la visualización del carrito
-function actualizarCarrito() {
-  const carritoContainer = document.getElementById('carrito-container');
-  carritoContainer.innerHTML = ""; // Limpiar el contenido anterior
-
-  carrito.forEach((producto, index) => {
-    const productoDiv = document.createElement('div');
-    productoDiv.className = 'producto-carrito';
-    productoDiv.innerHTML = `
-      <p>${producto.nombre} - Precio: ${producto.precio}</p>
-      <input type="number" min="1" value="${producto.cantidad}" class="cantidad-producto" data-index="${index}">
-      <button class="btn-eliminar" data-index="${index}">Eliminar</button>
-    `;
-    carritoContainer.appendChild(productoDiv);
-  });
-
-  // Guardar el carrito actualizado en localStorage
-  guardarCarrito();
 }
 
 // Función para manejar el evento input y cambiar la cantidad de un producto en el carrito
