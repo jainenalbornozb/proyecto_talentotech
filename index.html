@@ -21,6 +21,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="favicon.ico" type="image/x-icon" />
+    
   </head>
   <body>
     <!-- Cabecera -->
@@ -50,6 +51,13 @@
             <li class="nav-item">
               <a class="nav-link" href="#opiniones">Opiniones</a>
             </li>
+ <!-- Ícono del carrito -->
+            <li class="nav-item">
+  <a class="nav-link carrito-link" href="#carrito">
+    <i class="fa fa-shopping-cart"></i>
+    <span>Carrito (<span id="carrito-cantidad">0</span>)</span>
+  </a>
+</li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Buscar producto" aria-label="Search">
@@ -64,19 +72,21 @@
     <main>
       <!-- Carousel con imágenes -->
       <div class="carousel-wrapper">
-        <div class="carousel-container">
-      </div>    <div class="carousel">
+        <div class="carousel-container">  
+       <div class="carousel">
             <div class="image-one"> <img src="./assets/img/banner-web.jpg" alt="banner-con-iniciales"></div>
             <div class="image-two"><img src="./assets/img/banner-desfile nocturno.jpg" alt="banner-desfile-nocturno"></div>
-            <div class="image-three"> <img src="./assets/img/banner-historias ocultas.jpg" alt="banner-historias-ocultas"></div>
-            <div class="image-four"> </div><img src="./assets/img/banner-merchandising.jpg" alt="banner-merchandising"</div>
+            <div class="image-three"><img src="./assets/img/banner-historias ocultas.jpg" alt="banner-historias-ocultas"></div>
+            <div class="image-four"><img src="./assets/img/banner-merchandising.jpg" alt="banner-merchandising"</div>
           </div>
         </div>
       </div>
+    </div> 
+
 
       <!-- Hero -->
       <section id="hero">
-        <div class="</div>hero-text">
+        <div class="hero-text">
           <h1>Bienvenidos al Universo Páramo Sombrío</h1>
           <p>
             A poco más de un año desde su creación, <span class="bold">Páramo Sombrío</span> se ha consolidado como una marca en constante crecimiento, con un universo narrativo que sigue expandiéndose y sorprendiendo. Bajo la visión de su fundador, <span class="bold">Alejandro Maldonado</span>, conocido como <span class="bold">CD</span>, autor de <span class="bold">Desfile Nocturno: la noche de los demonios</span> e <span class="bold">Historias Ocultas Vol I: cuatro caminos cuatro cadenas</span>, hemos construido una comunidad apasionada por el misterio y lo sobrenatural.
@@ -88,7 +98,6 @@
       </section>
 
 <!-- Sección con productos -->
-
 <section id="productos-container">
   <div class="productos">
     <article class="producto" data-index="0">
@@ -127,7 +136,7 @@
       <img src="./assets/img/remera-sello-pheberiel.jpg" alt="remera-negra-sello-pheberiel">
       <div class="detalles-articulo">
         <p class="precio">$18.000</p>
-        <h4>Remera Sello de Pheberiel</h4>
+        <h4>Remera Sello de Pheberiel</h4> 
       </div>
     </article>
   </div>
@@ -148,7 +157,7 @@
       <div class="detalles-articulo">
         <p class="precio">$1.500</p>
         <h4>Llaveros de personaje a elección</h4>
-      </div>
+          </div>
     </article>
   </div>
 </section>
@@ -209,30 +218,38 @@
     <button type="reset" class="btn-reset">Borrar</button>
       </form>
     </section>
+
+<!-- Para trabajar con APIS -->
+    <section id="provincias-argentinas">
+      <h2 id="provincias-titulo">¿Hasta dónde hacemos envíos?</h2>
+      <ul id="lista-provincias">
+        </ul>
+    </section>
     </main>
 
     <section id="opiniones">
-      <h2>Reseñas</h2>
-      <div class="opinion">
+      <h2 class="titulo-reseñas">Reseñas</h2>
+      <div class="reseña">
         <p>
           "Me encantó Desfile Nocturno, la historia es muy original y me mantuvo enganchada desde el principio hasta el final. ¡Espero con ansias el volumen 2!"
         </p>
         <p>- Gabriela Gómez </p>
       </div>
-      <div class="opinion">
+      <div class="reseña">
+        <p>
         "Desfile Nocturno me ha permitido tener otra opinión respecto a la literatura de terror. Puede ser atrapante y emocionante a la vez. ¡Muy recomendado!"
         </p>
         <p>- Victor Velázquez</p>
       </div>
-      <div class="opinion">
+      <div class="reseña">
         <p>
           "Historias Ocultas es un libro que me ha sorprendido gratamente. La narrativa es muy buena y los personajes son por demás interesantes. ¡No puedo creer que el volumen 2 esté por salir!"
         </p>
         <p>- Tu fiel amigo, SgC</p>
       </div>
-      <div class="opinion">
+      <div class="reseña">
+        <p>
         "Historias Ocultas me ha inspirado a leer otros libros de terror. La historia es muy interesante y los personajes son variados e impredecibles. Cada historia me dejó con ganas de más. Seguro lo releeré pronto!"
-        </p>
         <p>- Soledad Sánchez</p>
       </div>
     </section>
