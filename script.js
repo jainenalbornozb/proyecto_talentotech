@@ -190,20 +190,39 @@ function actualizarCarrito() {
   const carritoContainer = document.getElementById('carrito-container');
   carritoContainer.innerHTML = ""; // Limpiar el contenido anterior
 
+  // Calcular el total a pagar
+  let total = 0;
+
   carrito.forEach((producto, index) => {
     const productoDiv = document.createElement('div');
     productoDiv.className = 'producto-carrito';
     productoDiv.innerHTML = `
-      <p>${producto.nombre} - Precio: ${producto.precio} - Cantidad: ${producto.cantidad}</p>
+      <p>${producto.nombre} - Precio: $${producto.precio} - Cantidad: ${producto.cantidad}</p>
       <input type="number" min="1" value="${producto.cantidad}" class="cantidad-producto" data-index="${index}">
       <button class="btn-eliminar" data-index="${index}">Eliminar</button>
     `;
     carritoContainer.appendChild(productoDiv);
+
+    // Calcular el total
+    total += producto.precio * producto.cantidad;
   });
+
+  // Mostrar el total actualizado en el carrito
+  const totalElemento = document.querySelector('#carrito-total p');
+  totalElemento.textContent = `Total: $${total}`;
 
   // Guardar el carrito actualizado en localStorage
   guardarCarrito();
 }
+
+// Función para vaciar el carrito
+function vaciarCarrito() {
+  carrito = [];  // Limpiar el array del carrito
+  actualizarCarrito();  // Actualizar la visualización
+}
+
+// Evento para el botón "Borrar"
+document.getElementById('btn_borrar').addEventListener('click', vaciarCarrito);
 
 // Función para manejar el evento click y eliminar un producto del carrito
 function eliminarDelCarrito(event) {
@@ -211,14 +230,24 @@ function eliminarDelCarrito(event) {
   if (boton) {
     const index = boton.getAttribute('data-index');
     if (index !== null) {
-      carrito.splice(index, 1);
-      actualizarCarrito();
+      carrito.splice(index, 1);  // Eliminar producto del carrito
+      actualizarCarrito();  // Actualizar la visualización del carrito
     }
   }
 }
 
-// Asocia el evento click al contenedor del carrito
-document.getElementById('carrito-container').addEventListener('click', eliminarDelCarrito);
+// Función para manejar el evento input y cambiar la cantidad de un producto en el carrito
+function cambiarCantidad(event) {
+  const input = event.target.closest('.cantidad-producto');
+  if (input) {
+    const index = input.getAttribute('data-index');
+    if (index !== null) {
+      carrito[index].cantidad = parseInt(input.value);  // Actualizar cantidad
+      guardarCarrito();  // Guardar carrito actualizado en localStorage
+      actualizarCarrito();  // Actualizar la visualización del carrito
+    }
+  }
+}
 
 // Guardar el carrito en localStorage
 function guardarCarrito() {
@@ -230,23 +259,12 @@ function cargarCarrito() {
   const carritoGuardado = localStorage.getItem('carrito');
   if (carritoGuardado) {
     carrito = JSON.parse(carritoGuardado);
-    actualizarCarrito();
+    actualizarCarrito();  // Actualizar el carrito con los datos guardados
   }
 }
 
-// Función para manejar el evento input y cambiar la cantidad de un producto en el carrito
-function cambiarCantidad(event) {
-  const input = event.target.closest('.cantidad-producto');
-  if (input) {
-    const index = input.getAttribute('data-index');
-    if (index !== null) {
-      carrito[index].cantidad = parseInt(input.value);
-      guardarCarrito();
-    }
-  }
-}
-
-// Asocia el evento input al contenedor del carrito para cambiar la cantidad
+// Asocia los eventos necesarios al contenedor del carrito
+document.getElementById('carrito-container').addEventListener('click', eliminarDelCarrito);
 document.getElementById('carrito-container').addEventListener('input', cambiarCantidad);
 
 // Cargar el carrito al cargar la página
